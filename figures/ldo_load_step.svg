@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610"><rect width="1200" height="610" fill="#f5f8fa"/>
+<text x="36" y="57" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="bold" fill="#193a50">Load step: stimulus and separate response metrics</text>
+<text x="75" y="133" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" fill="#193a50">IOUT</text>
+<polyline points="80,225 330,225 360,145 690,145 720,225 1110,225" fill="none" stroke="#277d84" stroke-width="5"/>
+<text x="350" y="121" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">finite tr</text>
+<text x="695" y="121" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">finite tf</text>
+<text x="75" y="313" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" fill="#193a50">VOUT (concept)</text>
+<polyline points="80,375 330,375 360,455 420,405 500,385 680,385 720,320 780,365 860,375 1110,375" fill="none" stroke="#ad6a20" stroke-width="5"/>
+<polyline points="330,365 330,475" fill="none" stroke="#8b9ba6" stroke-width="2"/>
+<polyline points="690,305 690,475" fill="none" stroke="#8b9ba6" stroke-width="2"/>
+<text x="300" y="507" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#193a50">undershoot</text>
+<text x="720" y="507" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#193a50">overshoot</text>
+<text x="40" y="571" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">Use new final DC level for recovery; define window, hold time and included spikes.</text>
+</svg>

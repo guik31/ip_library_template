@@ -1,0 +1,85 @@
+# Template format only; this file does not suppress tool findings.
+# Paths are relative to the IP release root, not to this YAML file.
+heading: ldo_1v2_5ma — DRC — демонстрация waiver на основе summary
+description: Независимый пример формата. Summary и названия правил придуманы; проверка реального
+  LDO не выполнялась. Ни одно нарушение не согласовано. Все пути относятся к корню демонстрационного
+  комплекта.
+schema_version: '1.0'
+document_status: example_only
+waiver_id: DEMO-DRC-W001
+check_type: drc
+scope:
+  ip: LDO_1V2_5MA_DEMO
+  top_cell: ldo_1v2_5ma
+  ip_version: 0.1.0-demo
+  process: DEMO CMOS 180 nm
+  pdk_release: DEMO_PDK
+  metal_stack: DEMO_1P6M
+  run_id: DEMO-DRC-001
+  run_date: '2026-10-22'
+  context: block
+  input_artifacts: []
+  tool: synthetic_example
+  tool_version: not_applicable
+  rule_deck:
+    id: fictional_rules
+    version: demo
+    sha256: null
+  run_options_file: null
+  validity: Только указанные входные артефакты, версия deck, настройки и контекст запуска. Изменения
+    требуют повторной оценки.
+summary_source:
+  path: examples/drc_demo.summary
+  sha256: 62ed54a891c65659ef8c73d6b56e30bcab007c7fb3db3a5c4c26f7fd23a41655
+  full_report: null
+results:
+  tool_status: violations
+  review_status: pending
+  total_markers: 4
+  listed_markers: 4
+  accepted_markers: 0
+  requires_integration_markers: 4
+  pending_markers: 0
+  rejected_markers: 0
+source_summary: |
+  DEMONSTRATION SUMMARY - NOT A CALIBRE OR FOUNDRY REPORT
+  Top cell: ldo_1v2_5ma
+  Run ID: DEMO-DRC-001
+  Rule ID                         Count
+  EXAMPLE.DRC.DENSITY.BOUNDARY          4
+  TOTAL                               4
+violations:
+- id: DEMO-DRC-W001-01
+  rule_id: EXAMPLE.DRC.DENSITY.BOUNDARY
+  message: 'Демонстрация: окно проверки плотности пересекает границу analog macro.'
+  count: 4
+  marker_refs:
+  - DEMO-M1
+  - DEMO-M2
+  - DEMO-M3
+  - DEMO-M4
+  reason: 'Кандидат на требование к интеграции: отдельный macro не содержит окружающего metal fill.'
+  impact: Достаточность плотности и влияние fill на аналоговые цепи ещё не подтверждены.
+  required_action: Добавить допустимый fill на верхнем уровне, повторить DRC и при необходимости
+    extraction/characterization. До этого не считать нарушение закрытым.
+  disposition: requires_integration
+  owner: Layout integration owner (роль, не назначенный человек)
+  evidence: []
+  details:
+    layers:
+    - DEMO_M1
+    cells:
+    - ldo_1v2_5ma
+    markers: []
+approval:
+  internal:
+    status: pending
+    reviewer: null
+    date: null
+    reference: null
+  foundry:
+    status: not_requested
+    reviewer: null
+    date: null
+    reference: null
+    note: Демонстрация; реального обращения и согласования нет.

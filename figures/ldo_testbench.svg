@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700"><rect width="1200" height="700" fill="#f5f8fa"/>
+<text x="36" y="59" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="bold" fill="#193a50">LDO testbench - functional connections</text>
+<text x="36" y="100" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#193a50">Use actual IP domains, pin names and component models.</text>
+<rect x="40" y="175" width="265" height="85" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="56" y="210" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">VIN source</text>
+<text x="56" y="240" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">DC / ramp / AC</text>
+<rect x="40" y="295" width="265" height="85" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="56" y="330" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">VREF source</text>
+<text x="56" y="360" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">DC, noise model</text>
+<rect x="40" y="415" width="265" height="85" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="56" y="450" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">EN control</text>
+<text x="56" y="477" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#193a50">Finite edge, valid domain</text>
+<rect x="450" y="230" width="265" height="210" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="466" y="265" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">LDO DUT</text>
+<text x="466" y="295" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">VIN / VREF / EN</text>
+<text x="466" y="325" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">VOUT / VSS</text>
+<text x="466" y="355" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">Schematic or PEX</text>
+<polyline points="305,215 390,215 390,275 450,275" fill="none" stroke="#234b65" stroke-width="3"/>
+<polygon points="450,275 437.0,269.0 437.0,281.0" fill="#234b65"/>
+<polyline points="305,335 450,335" fill="none" stroke="#234b65" stroke-width="3"/>
+<polygon points="450,335 437.0,329.0 437.0,341.0" fill="#234b65"/>
+<polyline points="305,455 390,455 390,395 450,395" fill="none" stroke="#234b65" stroke-width="3"/>
+<polygon points="450,395 437.0,389.0 437.0,401.0" fill="#234b65"/>
+<polyline points="715,305 805,305 805,205 875,205" fill="none" stroke="#234b65" stroke-width="3"/>
+<polygon points="875,205 862.0,199.0 862.0,211.0" fill="#234b65"/>
+<text x="742" y="283" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#193a50">VOUT</text>
+<rect x="875" y="160" width="275" height="90" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="891" y="195" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">LOAD</text>
+<text x="891" y="225" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">DC / pulse / Rload</text>
+<rect x="875" y="385" width="275" height="110" rx="12" fill="#e7f0f5" stroke="#52788f" stroke-width="2"/>
+<text x="891" y="420" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#193a50">Output branch</text>
+<text x="891" y="450" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">COUT + ESR + ESL</text>
+<text x="891" y="480" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#193a50">Effective values</text>
+<polyline points="805,305 805,435 875,435" fill="none" stroke="#234b65" stroke-width="3"/>
+<polygon points="875,435 862.0,429.0 862.0,441.0" fill="#234b65"/>
+<polyline points="1010,250 1170,250 1170,575" fill="none" stroke="#234b65" stroke-width="3"/>
+<polyline points="1010,495 1010,575" fill="none" stroke="#234b65" stroke-width="3"/>
+<polyline points="585,440 585,575" fill="none" stroke="#234b65" stroke-width="3"/>
+<polyline points="100,575 1180,575" fill="none" stroke="#234b65" stroke-width="4"/>
+<text x="40" y="622" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#193a50">RETURN: explicit common reference; adapt for separate ground/sense domains.</text>
+<text x="40" y="662" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="normal" fill="#193a50">Illustration only. External bias, extra supplies and PG are added when implemented.</text>
+</svg>

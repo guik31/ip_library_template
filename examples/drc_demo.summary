@@ -1,0 +1,6 @@
+DEMONSTRATION SUMMARY - NOT A CALIBRE OR FOUNDRY REPORT
+Top cell: ldo_1v2_5ma
+Run ID: DEMO-DRC-001
+Rule ID                         Count
+EXAMPLE.DRC.DENSITY.BOUNDARY          4
+TOTAL                               4

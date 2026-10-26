@@ -1,0 +1,101 @@
+# Template format only; this file does not suppress tool findings.
+# Paths are relative to the IP release root, not to this YAML file.
+heading: ldo_1v2_5ma — ERC — демонстрация waiver на основе summary
+description: Независимый пример формата. Summary и названия правил придуманы; проверка реального
+  LDO не выполнялась. Ни одно нарушение не согласовано. Все пути относятся к корню демонстрационного
+  комплекта.
+schema_version: '1.0'
+document_status: example_only
+waiver_id: DEMO-ERC-W001
+check_type: erc
+scope:
+  ip: LDO_1V2_5MA_DEMO
+  top_cell: ldo_1v2_5ma
+  ip_version: 0.1.0-demo
+  process: DEMO CMOS 180 nm
+  pdk_release: DEMO_PDK
+  metal_stack: DEMO_1P6M
+  run_id: DEMO-ERC-001
+  run_date: '2026-10-22'
+  context: block
+  input_artifacts: []
+  tool: synthetic_example
+  tool_version: not_applicable
+  rule_deck:
+    id: fictional_rules
+    version: demo
+    sha256: null
+  run_options_file: null
+  validity: Только указанные входные артефакты, версия deck, настройки и контекст запуска. Изменения
+    требуют повторной оценки.
+summary_source:
+  path: examples/erc_demo.summary
+  sha256: 9fa1ac90f348fc9e098a4b3040005b664d9d9cf0ad2aec40ef7a3750564441b4
+  full_report: null
+results:
+  tool_status: violations
+  review_status: pending
+  total_markers: 2
+  listed_markers: 2
+  accepted_markers: 0
+  requires_integration_markers: 1
+  pending_markers: 1
+  rejected_markers: 0
+source_summary: |
+  DEMONSTRATION SUMMARY - NOT A CALIBRE OR FOUNDRY REPORT
+  Top cell: ldo_1v2_5ma
+  Run ID: DEMO-ERC-001
+  Rule ID                         Count
+  EXAMPLE.ERC.FLOATING.VREF             1
+  EXAMPLE.ERC.WELL.BIAS                 1
+  TOTAL                               2
+violations:
+- id: DEMO-ERC-W001-01
+  rule_id: EXAMPLE.ERC.FLOATING.VREF
+  message: 'Демонстрация: внешний VREF не имеет источника в standalone контексте.'
+  count: 1
+  marker_refs:
+  - DEMO-E1
+  reason: Reference расположен вне IP; block-level контекст не содержит его источник.
+  impact: Функциональность и корректность bias зависят от внешнего reference.
+  required_action: Подключить VREF и проверить все режимы питания и EN на верхнем уровне.
+  disposition: requires_integration
+  owner: Circuit integration owner (роль)
+  evidence: []
+  details:
+    nets:
+    - VREF
+    devices:
+    - ldo_1v2_5ma/VREF
+    operating_condition: Standalone block; внешняя схема reference отсутствует.
+- id: DEMO-ERC-W001-02
+  rule_id: EXAMPLE.ERC.WELL.BIAS
+  message: 'Демонстрация: соединение well требует проверки допустимых потенциалов.'
+  count: 1
+  marker_refs:
+  - DEMO-E2
+  reason: Обоснование ещё не получено. Реальное содержание правила определяется deck и типом well/device.
+  impact: Возможные junction conduction, latch-up или stress должны оцениваться по реальному процессу.
+  required_action: Проверить PDK, схему и режимы bias; исправить соединение либо получить документированное
+    решение ответственного инженера.
+  disposition: pending
+  owner: Circuit / reliability owner (роль)
+  evidence: []
+  details:
+    nets:
+    - DEMO_WELL_NET
+    devices:
+    - DEMO_DEVICE
+    operating_condition: Требуется анализ всех допустимых последовательностей и уровней питания.
+approval:
+  internal:
+    status: pending
+    reviewer: null
+    date: null
+    reference: null
+  foundry:
+    status: not_requested
+    reviewer: null
+    date: null
+    reference: null
+    note: Демонстрация; реального обращения и согласования нет.

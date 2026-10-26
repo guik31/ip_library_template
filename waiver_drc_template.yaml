@@ -1,0 +1,79 @@
+# Template format only; this file does not suppress tool findings.
+# Paths are relative to the IP release root, not to this YAML file.
+heading: <IP_NAME> — DRC waiver / review
+description: Основание документа, область применения и общее пояснение к списку нарушений. Исходный
+  summary сохраняется без изменения; решения описаны в violations.
+schema_version: '1.0'
+document_status: draft
+waiver_id: <IP_ID>-DRC-W001
+check_type: drc
+scope:
+  ip: <IP_ID>
+  top_cell: <TOP_CELL>
+  ip_version: <VERSION>
+  process: <PROCESS>
+  pdk_release: <PDK_RELEASE>
+  metal_stack: <STACK>
+  run_id: <RUN_ID>
+  run_date: <YYYY-MM-DD>
+  context: block
+  input_artifacts:
+  - path: <gds/top.gds.gz or cdl/netlist.sp>
+    sha256: null
+  tool: <TOOL>
+  tool_version: <VERSION>
+  rule_deck:
+    id: <DECK_ID>
+    version: <DECK_VERSION>
+    sha256: null
+  run_options_file: results/drc/<RUN_ID>/runset
+  validity: Только указанные входные артефакты, версия deck, настройки и контекст запуска. Изменения
+    требуют повторной оценки.
+summary_source:
+  path: results/drc/<RUN_ID>/<TOP_CELL>.summary
+  sha256: null
+  full_report: <report or results database>
+results:
+  tool_status: not_evaluated
+  review_status: pending
+  total_markers: null
+  listed_markers: null
+  accepted_markers: 0
+  requires_integration_markers: 0
+  pending_markers: null
+  rejected_markers: 0
+source_summary: |
+  <Вставить текст исходного summary с отступом минимум 2 пробела>
+violations:
+- id: W001-01
+  rule_id: <EXACT_RULE_ID>
+  message: <Точный текст правила из summary; не интерпретировать ID по названию>
+  count: null
+  marker_refs: []
+  reason: <Почему нарушение рассматривается для исключения>
+  impact: <Влияние на надёжность, yield, функцию, интеграцию>
+  required_action: <Компенсация или ограничение; если нет — обоснованное none>
+  disposition: pending
+  owner: <ENGINEER>
+  evidence: []
+  details:
+    layers:
+    - <LAYER>
+    cells:
+    - <CELL_OR_INSTANCE>
+    markers:
+    - id: <MARKER_ID>
+      bbox_um: null
+approval:
+  internal:
+    status: pending
+    reviewer: null
+    date: null
+    reference: null
+  foundry:
+    status: not_requested
+    reviewer: null
+    date: null
+    reference: null
+    note: Нужность согласования определяется процедурой конкретного процесса; внутреннее решение
+      не заменяет согласование фабрики.

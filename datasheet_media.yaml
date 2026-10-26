@@ -1,0 +1,38 @@
+# File references require a renderer; YAML itself does not display images.
+heading: LDO - графические материалы
+description: Реально приложенные собственные иллюстрации. Они не являются результатами ADE и не содержат
+  измеренных характеристик.
+path_base: package_root
+figures:
+- id: FIG-TB
+  file: figures/ldo_testbench.png
+  vector_file: figures/ldo_testbench.svg
+  caption: 'Функциональные связи testbench: sources, DUT, output network и load.'
+  alt: Testbench LDO
+  kind: diagram
+  method_ids:
+  - M01
+  - M13
+  - M21
+  run_id: null
+  status: illustration
+- id: FIG-PSRR
+  file: figures/ldo_psrr_testbench.png
+  vector_file: figures/ldo_psrr_testbench.svg
+  caption: Выбранный AC supply stimulus, тихие reference/control и output load.
+  alt: PSRR testbench
+  kind: diagram
+  method_ids:
+  - M09
+  run_id: null
+  status: illustration
+- id: FIG-LOAD
+  file: figures/ldo_load_step.png
+  vector_file: figures/ldo_load_step.svg
+  caption: Качественная схема load step и отдельных response metrics, не waveform симуляции.
+  alt: Понятия undershoot и overshoot
+  kind: conceptual_diagram
+  method_ids:
+  - M13
+  run_id: null
+  status: illustration

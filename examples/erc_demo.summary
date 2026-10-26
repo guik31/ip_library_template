@@ -1,0 +1,7 @@
+DEMONSTRATION SUMMARY - NOT A CALIBRE OR FOUNDRY REPORT
+Top cell: ldo_1v2_5ma
+Run ID: DEMO-ERC-001
+Rule ID                         Count
+EXAMPLE.ERC.FLOATING.VREF             1
+EXAMPLE.ERC.WELL.BIAS                 1
+TOTAL                               2
